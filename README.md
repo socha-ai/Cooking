@@ -1,2 +1,1 @@
-# Cooking
-goblin cooking game
+# goblin cooking game
