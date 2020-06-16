@@ -1,5 +1,12 @@
 /*CSS styles for web design*/
 
+/* player styles */
+.player {
+  height: 25px;
+  width: 25px;
+  background-color: green;
+}
+/* grid styles */
 .grid {
   display: grid;
   grid-template-columns: 40% 60%;
