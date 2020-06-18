@@ -21,9 +21,11 @@
   background-color: yellow;
 }
 
+/*
 .dining div:hover, .kitchen div:hover, .inventory div:hover {
   background-color: pink;
 }
+*/ 
 .notes {
   grid-column: 1 / 2;
   grid-row: 1 / 2;

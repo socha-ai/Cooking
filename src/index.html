@@ -6,28 +6,28 @@
     <link href = "styles.css" rel = "stylesheet" />
   </head>
   <body>
-    <div class = player> me </div>
-    <script src = "main.js"></script>
+    <div id = player class = player> me </div>
+    <script type = "text/javascript" src = "main.js"></script>
     <div class = "grid">
-      <div class = "notes"> Notes/Tips </div>
+      <div id = notes onclick = "preformAction('notes')" class = "notes"> Notes/Tips </div>
       <div class = "dining">
-        <div> Table </div>
-        <div> Table </div>
-        <div> Table </div>
-        <div> Table </div>
-        <div> Table </div>
-        <div> Table </div>
+        <div id = 't1' onclick = "preformAction('t1')"> Table </div>
+        <div id = 't2' onclick = "preformAction('t2')"> Table </div>
+        <div id = 't3' onclick = "preformAction('t3')"> Table </div>
+        <div id = 't4' onclick = "preformAction('t4')"> Table </div>
+        <div id = 't5' onclick = "preformAction('t5')"> Table </div>
+        <div id = 't6' onclick = "preformAction('t6')"> Table </div>
       </div>
-      <div class = "inventory">
-        <div> Bread </div>
-        <div> Cookies </div>
-        <div> Coffee </div>
+      <div id = 'inventory' class = "inventory">
+        <div id = 'bread' onclick = "preformAction('bread')"> Bread </div>
+        <div id = 'cookies' onclick = "preformAction('cookies')"> Cookies </div>
+        <div id = 'coffee' onclick = "preformAction('coffee')"> Coffee </div>
       </div>
-      <div class = "oven"> Oven </div>
-      <div class = "kitchen">
-        <div> Mixer </div>
-        <div> Cutting Board </div>
-        <div> Coffee Maker </div>
+      <div id = 'oven' onclick = "preformAction('oven')" class = "oven"> Oven </div>
+      <div id = 'kitchen' class = "kitchen">
+        <div id = 'mixer' onclick = "preformAction('mixer')"> Mixer </div>
+        <div id = 'cuttingboard' onclick = "preformAction('cuttingboard')"> Cutting Board </div>
+        <div id = 'coffeemaker' onclick = "preformAction('coffeemaker')"> Coffee Maker </div>
       </div>
 
     </div>

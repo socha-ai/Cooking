@@ -11,6 +11,7 @@ window.addEventListener('load', () => {
   player.style.top = 0;
 });
 
+// player movement
 window.addEventListener('keydown', (e) => {
   switch(e.key){
     case 'ArrowLeft':
@@ -34,3 +35,29 @@ window.addEventListener('keydown', (e) => {
         break;
   }
 });
+
+// get the midpoint of any element
+function getMidpoint(element){
+    var coords = new Object();
+    let centerX = element.offsetLeft + element.offsetWidth / 2;
+    let centerY = element.offsetTop + element.offsetHeight / 2;
+
+    coords['x'] = centerX;
+    coords['y'] = centerY;
+    console.log("centerX: " + centerX, "centerY: " + centerY);
+    return coords;
+}
+
+function preformAction(elementName){
+    // check if player and button pressed are close to each other
+    var player;
+    var element;
+
+    player = document.getElementById('player');
+    element = document.getElementById(elementName);
+
+    if (Math.abs(getMidpoint(element).x - getMidpoint(player).x) < 10 && Math.abs(getMidpoint(element).y - getMidpoint(player).y) < 10) {
+      console.log("good");
+      element.style.backgroundColor = 'gray';
+    }
+}
