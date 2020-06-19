@@ -13,15 +13,25 @@ window.addEventListener('load', () => {
 
 // player movement
 window.addEventListener('keydown', (e) => {
+  // add collision detection
+  let playerelem = document.getElementById('player');
   switch(e.key){
     case 'ArrowLeft':
     case 'a':
-        player.style.left = parseInt(player.style.left) - moveBy + 'px';
+        //console.log(getMidpoint(playerelem).x, getMidpoint(playerelem).y);
+        //console.log(playerelem.offsetTop, playerelem.offsetWidth, playerelem.offsetLeft, playerelem.offsetHeight);
+        if (checkCollision(playerelem, playerelem.offsetLeft - moveBy, playerelem.offestTop)){
+          player.style.left = parseInt(player.style.left) - moveBy + 'px';
+        }
         break;
 
     case 'ArrowRight':
     case 'd':
-        player.style.left = parseInt(player.style.left) + moveBy + 'px';
+        console.log(window.innerWidth);
+        console.log(window.innerHeight);
+        if (checkCollision(playerelem, playerelem.offsetLeft + moveBy, playerelem.offestTop)){
+          player.style.left = parseInt(player.style.left) + moveBy + 'px';
+        }
         break;
 
     case 'ArrowUp':
@@ -31,10 +41,34 @@ window.addEventListener('keydown', (e) => {
 
     case 'ArrowDown':
     case 's':
-        player.style.top = parseInt(player.style.top) + moveBy + 'px';
+
+        //if (checkCollision(playerelem, playerelem.offsetLeft, playerelem.offestTop + moveBy)){
+          console.log(window.innerHeight);
+          player.style.top = parseInt(player.style.top) + moveBy + 'px';
+        //}
+
         break;
   }
 });
+
+// check if coordinates cause collision - takes in coordinates of midpoint
+function checkCollision(element, xcoord, ycoord) {
+  // check corners
+  console.log(element.getBoundingClientRect());
+  if (xcoord < 0 || ycoord < 0) {
+    return false;
+  }
+
+  else if (xcoord >= window.innerWidth) {
+    return false;
+  }
+
+  else if (ycoord >= window.innerHeight){
+    return false;
+  }
+
+  return true;
+}
 
 // get the midpoint of any element
 function getMidpoint(element){
@@ -56,6 +90,7 @@ function preformAction(elementName){
     player = document.getElementById('player');
     element = document.getElementById(elementName);
 
+    // check that the player is close enough to the element
     if (Math.abs(getMidpoint(element).x - getMidpoint(player).x) < 10 && Math.abs(getMidpoint(element).y - getMidpoint(player).y) < 10) {
       console.log("good");
       element.style.backgroundColor = 'gray';

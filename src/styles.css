@@ -1,5 +1,9 @@
 /*CSS styles for web design*/
 
+/* gets rid of scroll bar */ 
+body {
+  overflow: hidden;
+}
 /* player styles */
 .player {
   height: 25px;
@@ -10,7 +14,7 @@
 .grid {
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-auto-rows: minmax(200px, auto);
+  grid-auto-rows: minmax(190px, auto);
 }
 
 .grid div{
@@ -21,11 +25,10 @@
   background-color: yellow;
 }
 
-/*
-.dining div:hover, .kitchen div:hover, .inventory div:hover {
+.dining div:hover, .kitchen div:hover, .inventory div:hover, .oven div:hover {
   background-color: pink;
 }
-*/ 
+
 .notes {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -56,6 +59,9 @@
 .oven {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1em;
 }
 
 .kitchen {
