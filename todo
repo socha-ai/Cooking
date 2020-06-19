@@ -1,0 +1,8 @@
+To do:
+- collision detection of all div elements
+- structure for player and all appliances
+- detect if player is close enough to appliance to be able to click on it
+- trash div that discards whatever the player is currently holding
+- table div for players to temporarily keep whatever they are holding
+
+- organize div elements (can have multiple classes ) 
