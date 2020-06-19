@@ -55,7 +55,7 @@ body {
   grid-auto-rows: 50px;
 
 }
-
+/*MOVE THIS SOMEWHERE ELSE */ 
 #hb, #hc, #hcf {
   visibility: hidden;
 }
