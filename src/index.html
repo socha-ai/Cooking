@@ -37,17 +37,17 @@
         </div>
       </div>
       <div id = 'inventory' class = "inventory">
-        <div id = 'bread' class = 'bread' onclick = "preformAction('bread')">
-          <div>Bread</div>
-          <div id = 'hb'>HB</div>
+        <div class = 'bread'>
+          <div id = 'bread' onclick = "preformAction('bread')">Bread</div>
+          <div id = 'hiddenbread' onclick = "preformAction('hiddenbread')">HB</div>
         </div>
-        <div id = 'cookies' class = 'cookies' onclick = "preformAction('cookies')">
-          <div>Cookies</div>
-          <div id = 'hc'>HC</div>
+        <div class = 'cookies'>
+          <div id = 'cookies' onclick = "preformAction('cookies')">Cookies</div>
+          <div id = 'hiddencookies' onclick = "preformAction('hiddencookies')">HC</div>
          </div>
-        <div id = 'coffee' class = 'coffee' onclick = "preformAction('coffee')">
-          <div>Coffee</div>
-          <div id = 'hcf'>HCF</div>
+        <div class = 'espresso'>
+          <div id = 'espresso' onclick = "preformAction('espresso')">Espresso</div>
+          <div id = 'hiddenespresso' onclick = "preformAction('hiddenespresso')">he</div>
         </div>
       </div>
       <div id = 'kitchen2' class = 'oven'>
@@ -66,12 +66,15 @@
           <div>CutBoard</div>
           <div>hi</div>
         </div>
-        <div id = 'coffeemaker' class = 'ktchut'onclick = "preformAction('coffeemaker')">
+        <div id = 'espressomaker' class = 'ktchut' onclick = "preformAction('espressomaker')">
           <div>CfeMkr</div>
           <div>hi</div>
         </div>
-        
-      </div>
+        <div id = 'onhold'>
+          <div id = 'slot1' onclick = "preformAction('slot1')">slot1</div>
+          <div id = 'slot2' onclick = "preformAction('slot2')">slot2</div>
+          <div id = 'slot3' onclick = "preformAction('slot3')">slot3</div>
+        </div>
 
     </div>
   </body>

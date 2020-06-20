@@ -3,6 +3,8 @@
 /* gets rid of scroll bar */
 body {
   overflow: hidden;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 /* player styles */
 .player {
@@ -25,7 +27,7 @@ body {
   background-color: yellow;
 }
 
-.dining div:hover, .kitchen div:hover, .inventory div:hover, .oven div:hover {
+.dining div div:hover, .kitchen div div:hover, .inventory div div:hover, .oven div div:hover, #trash:hover{
   background-color: pink;
 }
 
@@ -55,27 +57,42 @@ body {
   grid-auto-rows: 50px;
 
 }
-/*MOVE THIS SOMEWHERE ELSE */ 
-#hb, #hc, #hcf {
+/*MOVE THIS SOMEWHERE ELSE */
+#hiddenbread, #hiddenespresso, #hiddencookies {
   visibility: hidden;
 }
 
-.bread, .cookies, .coffee, .table, .ktchut, .ovenbt{
+.bread, .cookies, .espresso, .table, .ktchut, .ovenbt{
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+#onhold {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
 }
 
 .oven {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 50px;
+  grid-gap: 1em;
   padding: 1em;
-  grid-gap: 5em;
-  padding-top: 40%;
 }
 
+#oven {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+#trash {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
 .kitchen {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
